@@ -1,0 +1,25 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'main.java.com.Netflix.EdgeRealTimeEvents.TweetAnomalyDetectionClient'
+
+repositories {
+  jcenter {
+            url "http://jcenter.bintray.com/"
+        }
+   maven {
+           url "http://central.maven.org/maven2/"
+   }
+}
+//http://central.maven.org/maven2/org/reactivestreams/reactive-streams/1.0.1/reactive-streams-1.0.1.jar
+
+dependencies {
+    compile "io.reactivex.rxjava2:rxjava:2.0.0-RC1"
+    compile "org.reactivestreams:reactive-streams:1.0.1"
+    compile "org.json:json:20140107"
+}
+
+jar {
+    baseName = 'vinay-gangasani-anomaly-detection'
+    version =  '0.1.0'
+}
